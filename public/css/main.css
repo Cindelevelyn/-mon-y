@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #222;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(#f00, #f0f);
+  clip-path: circle(30% at right 70%);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  background: linear-gradient(#2196f3, #e91e63);
+  clip-path: circle(20% at 10% 10%);
+}
+
+nav {
+  height: 70px;
+  margin-left: 250px;
+}
+
+@media (max-width: 1200px) {
+  nav {
+    margin-left: 105px;
+  }
+
+  .navbar-toggler.active{
+    visibility: hidden;
+  }
+}
+
+ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li,
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: gray;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+ul li a.menu-item {
+  transform: scale(1);
+  transition: 0.5s;
+  display: block;
+  color: #fff;
+}
+
+ul li a.menu-item:hover {
+  color: gray;
+}
+
+ul li a ion-icon {
+  margin-top: 11px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+ul li a.menu-item.hide-item {
+  transform: scale(0);
+}
+
+ul li:nth-child(1) a.menu-item.hide-item {
+  transition-delay: 0.5s;
+}
+
+ul li:nth-child(2) a.menu-item.hide-item {
+  transition-delay: 0.2s;
+}
+
+ul li:nth-child(1) a.menu-item {
+  transition-delay: 0.2s;
+}
+
+ul li:nth-child(2) a.menu-item {
+  transition-delay: 0.5s;
+}
+
+.search-form {
+  position: absolute;
+  top: 0;
+  left: 70%;
+  transform: translateX(0);
+  width: 300px;
+  height: 70px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+.search-form.active {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+  transform: translateX(-50%);
+}
+
+.search-form input {
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-form input::placeholder {
+  color: #fff;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 70px;
+  color: #fff;
+  line-height: 90px;
+  text-align: right;
+  width: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.close ion-icon {
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+.close.active {
+  opacity: 1;
+  visibility: visible;
+}

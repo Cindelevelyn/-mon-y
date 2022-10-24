@@ -1,0 +1,152 @@
+<main>
+    <div class="container">
+        <div class="box">
+            <div class="titulo">
+                <p>Entradas</p>
+                <ion-icon name="arrow-up-circle-outline"></ion-icon>
+            </div>
+            <h3>R$2200,00</h3>
+        </div>
+        <div class="box">
+            <div class="titulo">
+                <p>Saídas</p>
+                <ion-icon name="arrow-down-circle-outline"></ion-icon>
+            </div>
+            <h3>-R$25,00</h3>
+        </div>
+        <div class="box">
+            <div class="titulo">
+                <p>Total</p>
+                <span>$</span>
+            </div>
+            <h3>R$2175,00</h3>
+        </div>
+    </div>
+    <div class="nav-footer">
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            + Nova transação
+        </button>
+    </div>
+
+    <div class="categorias">
+        <table>
+            <tr>
+                <th class="nome">Título</th>
+                <th>Valor</th>
+                <th>Categoria</th>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr class="box-item">
+                <td>Ifood - brasa esfiharia</td>
+                <td>-R$25,00</td>
+                <td>
+                    <p class="categoria">Comida</p>
+                </td>
+                <td>10/10/2022</td>
+                <td>20h00</td>
+                <td><a href="#">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </a></td>
+                <td><a href="#">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </a></td>
+            </tr>
+            <tr class="box-item">
+                <td>Produto de limpeza</td>
+                <td>-R$58,15</td>
+                <td>
+                    <p class="categoria">Casa</p>
+                </td>
+                <td>10/10/2022</td>
+                <td>20h00</td>
+                <td><a href="#">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </a></td>
+                <td><a href="#">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </a></td>
+            </tr>
+            <tr class="box-item">
+                <td>Trabalho extra</td>
+                <td>R$350,00</td>
+                <td>
+                    <p class="categoria">Trabalho</p>
+                </td>
+                <td>10/10/2022</td>
+                <td>20h00</td>
+                <td><a href="#">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </a></td>
+                <td><a href="#">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </a></td>
+            </tr>
+            <tr class="box-item">
+                <td>Caderno</td>
+                <td>-R$30,00</td>
+                <td>
+                    <p class="categoria">Faculdade</p>
+                </td>
+                <td>10/10/2022</td>
+                <td>20h00</td>
+                <td><a href="#">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </a></td>
+                <td><a href="#">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </a></td>
+            </tr>
+        </table>
+    </div>
+
+    <b></b>
+
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="mod modal-content">
+                <div class="modal-header">
+                    <h1 class="titu modal-title fs-5" id="exampleModalLabel">Cadastrar transação</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <span>Titulo:</span>
+                    <input type="text" placeholder="Titulo">
+
+                    <span>Valor:</span>
+                    <input type="text" placeholder="Valor" class="form-control" id="preco">
+                    <div class="erro" id="divMensagemPreco"></div>
+
+                    <div class="cate-btn">
+                        <button>Entrada</button>
+                        <button>Saída</button>
+                    </div>
+
+                    <span>Categoria:</span>
+                    <select name="select">
+                        <option value="">Selecione a categoria...</option>
+                        <option value="Trabalho">Trabalho</option>
+                        <option value="Casa">Casa</option>
+                        <option value="Faculdade">Faculdade</option>
+                        <option value="Comida">Comida</option>
+                        <option value="Pet">Pet</option>
+                    </select>
+                    <button>Cadastrar</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

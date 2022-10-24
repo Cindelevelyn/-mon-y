@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="js/vanilla2.js"></script>
+    <title>{{tituloPagina}}</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            {{!-- <div class="menu"> --}}
+                <a class="logo navbar-brand" href="#">+Mon&#38;y</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link menu-item" href="#">sobre</a></li>
+                        <li class="nav-item"><a class="nav-link menu-item" href="#">contato</a></li>
+                        <li><a href="#" id="search" class="busca">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </a>
+                        </li>
+                </div>
+                </ul>
+                {{!--
+            </div> --}}
+            <div class="search-form">
+                <form>
+                    <input type="text" name="" placeholder="Buscar...">
+                </form>
+                <a href="#" class="close">
+                    <ion-icon name="close-outline"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    {{{body}}}
+
+
+    <input type="text" id="preco">
+    <div class="erro" id="divMensagemPreco"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#search').click(function () {
+                $('.menu-item').addClass('hide-item')
+                $('.search-form').addClass('active')
+                $('.close').addClass('active')
+                $('.navbar-toggler').addClass('active')
+                $('#search').hide()
+            })
+            $('.close').click(function () {
+                $('.menu-item').removeClass('hide-item')
+                $('.search-form').removeClass('active')
+                $('.close').removeClass('active')
+                $('.navbar-toggler').removeClass('active')
+                $('#search').show()
+            })
+        })
+    </script>
+    <script>
+            (function () {
+                VMasker(document.getElementById("preco")).maskMoney({ unit: 'R$' });
+            })();
+    </script>
+</body>
+
+</html>
