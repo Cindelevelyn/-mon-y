@@ -17,8 +17,8 @@ body::before {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 100%;
   background: linear-gradient(#f00, #f0f);
   clip-path: circle(30% at right 70%);
 }
@@ -40,6 +40,12 @@ nav {
 }
 
 @media (max-width: 1200px) {
+  body{
+    overflow-x: hidden;
+  }
+  body::before {
+    visibility: hidden;
+  }
   nav {
     margin-left: 105px;
   }
@@ -168,4 +174,10 @@ ul li:nth-child(2) a.menu-item {
 .close.active {
   opacity: 1;
   visibility: visible;
+}
+
+nav a ion-icon{
+  color: white;
+  font-size: 20px;
+  margin-right: 20px;
 }

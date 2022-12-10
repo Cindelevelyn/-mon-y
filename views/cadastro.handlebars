@@ -1,0 +1,45 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="row gap-4 d-flex justify-content-center align-items-center">
+    <div class="img-dinheiro col-6 col-xs-12">
+      <img src="/img/money.png" alt="" />
+    </div>
+    <div class="login-input col-6 col-xs-12 h-auto p-4">
+      <h1 class="titu fs-5">Cadastre-se já!</h1>
+      <div class="">
+        <form method="POST" action="">
+          <span>Nome:</span>
+          <input
+            type="text"
+            placeholder="Nome"
+            name="nome" id="nome" required
+          />
+
+          <span>Email:</span>
+          <input
+            type="email"
+            placeholder="Email"
+            name="email" id="email"
+          required />
+
+          <span>Senha:</span>
+          <input
+            type="password"
+            placeholder="Senha"
+            class="form-control"
+            name="pwd" id="pwd"
+          required />
+          <div class="erro" id="divMensagemPreco"></div>
+          <button type="submit" class="cad">Cadastrar</button>
+          <div class="cadastrar-link">
+            <a href="/login">Já é cadastrado? Faça o login!</a>
+          </div>
+          {{#if mensagemErro}}
+            <p style="color: red; text-align: center;">
+              {{mensagemErro}}
+            </p>
+          {{/if}}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

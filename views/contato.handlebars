@@ -1,0 +1,29 @@
+<main>
+  <div class="mod mod-contato">
+    <h1 class="titu fs-5">Cadastrar transação</h1>
+    <form method="GET" action="/">
+      <span>Nome:</span>
+      <input type="text" placeholder="Nome" name="titulo" />
+
+      <span>Email:</span>
+      <input
+        type="email"
+        placeholder="Email"
+        class="form-control"
+        name="valor"
+      />
+      <div class="erro" id="divMensagemPreco"></div>
+
+      <span>Mensagem:</span>
+      <textarea id="textarea" name="textarea" rows="5" cols="50"></textarea>
+      <div class="erro" id="divMensagemPreco"></div>
+
+      <button type="submit" class="cad">Cadastrar</button>
+      {{#if mensagem}}
+        <p style="color: {{cor}};">
+          {{mensagem}}
+        </p>
+      {{/if}}
+    </form>
+  </div>
+</main>

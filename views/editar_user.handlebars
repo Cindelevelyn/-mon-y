@@ -1,0 +1,23 @@
+<main>
+    <div class="mod h-auto p-4">
+        <h1 class="titu fs-5">Editar Usuário</h1>
+        <div class="">
+            <form method="POST" action="/edit_user">
+                <span>Nome:</span>
+                <input type="text" placeholder="Nome" name="nome" value="{{ usuario.nome }}">
+                <span>Email:</span>
+                <input type="text" placeholder="Email" name="email" value="{{ usuario.email }}">
+                <span>Senha:</span>
+                <input type="text" placeholder="Senha" name="senha" value="{{ usuario.senha }}">
+
+                <button type="submit" class="cad">Editar</button>
+                <input type="hidden" name="id" value="{{usuario.usuario_id}}">
+                {{#if mensagem}}
+                <p style="color: {{ cor }};">
+                    {{ mensagem }}
+                </p>
+                {{/if}}
+            </form>
+        </div>
+    </div>
+</main>

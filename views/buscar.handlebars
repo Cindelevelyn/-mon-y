@@ -1,0 +1,47 @@
+<main>
+    <br>
+    <br>
+    <h3>Busca por: <b>{{nomeBuscado}}</b></h1>
+
+        {{#if listaTransacoes}}
+        <div class="categorias">
+            <table>
+                <tr>
+                    <th class="nome">Título</th>
+                    <th>Valor</th>
+                    <th>Categoria</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                </tr>
+                {{#each listaTransacoes}}
+                <tr class="box-item">
+                    <td>{{titulo}}</td>
+                    {{#if entrada}}
+                    <td><label class="positivo">R${{valor}}</label></td>
+                    {{else}}
+                    <td><span class="negativo">-R${{valor}}</span></td>
+                    {{/if}}
+                    <td>
+                        <p class="categoria">{{categoria}}</p>
+                    </td>
+                    <td>{{dat}}</td>
+                    <td>{{hora}}</td>
+                    <td><a href="/delete/{{ id_li }}">
+                            <ion-icon name="trash-outline"></ion-icon>
+                        </a></td>
+                    <td><a href="/edit/{{ id_li }}">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </a></td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+        {{else}}
+        <b></b>
+        <div class="lista-vazia">
+            <p>Não foram encontradas transações com esse titulo...</p>
+        </div>
+        {{/if}}
+</main>

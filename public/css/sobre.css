@@ -1,0 +1,33 @@
+main .tituloSobre {
+    margin-top: 20px;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .containerSobre{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.center {
+    width: 800px;
+}
+
+p {
+    color: white;
+}
+
+.containerSobre {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerSobre img {
+    width: 150px;
+    border-radius: 50%;
+    margin-right: 40px;
+}

@@ -1,0 +1,52 @@
+<main>
+    <div class="mod">
+        <h1 class="titu fs-5">Cadastrar transação</h1>
+        <div class="">
+            <form method="POST" action="/cadastrar">
+                <span>Titulo:</span>
+                <input type="text" placeholder="Titulo" name="titulo" value="{{ titulo }}">
+
+                <span>Valor:</span>
+                <input type="text" placeholder="Valor" class="form-control" name="valor" value="{{ valor }}">
+                <div class="erro" id="divMensagemPreco"></div>
+
+                <div id="btn" class="cate-btn">
+                    <input type="radio" class="btn-check" name="options" id="option1" value=1 autocomplete="off">
+                    <label class="btn btn-secondary" for="option1">Entrada
+                        <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                    </label>
+                    <input type="radio" class="btn-check" name="options" id="option2" value=0 autocomplete="off">
+                    <label class="btn btn-secondary" for="option2">Saída
+                        <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <span>Categoria:</span>
+                <select name="categoria">
+                    <option value="">Selecione a categoria...</option>
+                    <option name="categoria" value="Trabalho">Trabalho</option>
+                    <option name="categoria" value="Casa">Casa</option>
+                    <option name="categoria" value="Faculdade">Faculdade</option>
+                    <option name="categoria" value="Comida">Comida</option>
+                    <option name="categoria" value="Pet">Pet</option>
+                </select>
+                <div class="textos">
+                    <div class="cate">
+                        <span>Data:</span>
+                        <input type="date" value="{{data}}" name="data" class="form-control">
+                    </div>
+                    <div class="cate">
+                        <span>Hora:</span>
+                        <input type="time" value="{{hora}}" name="hora" class="form-control">
+                    </div>
+                </div>
+                <button type="submit" class="cad">Cadastrar</button>
+                {{#if mensagem}}
+                <p style="color: {{ cor }};">
+                    {{ mensagem }}
+                </p>
+                {{/if}}
+            </form>
+        </div>
+    </div>
+</main>

@@ -54,6 +54,13 @@
                 </a>
             </div>
         </div>
+        <a class="text-white w-25" href="/edit_user/{{usuario.usuario_id}}">
+            <label class="d-flex align-items-center gap-2">
+                {{usuario.nome}}
+                <ion-icon class="fs-5" name="person-circle-outline"></ion-icon>
+            </label>
+        </a>
+        <a href="/logout"><ion-icon name="log-out-outline"></ion-icon></a>
     </nav>
 
     <div class="menu-aberto">
@@ -81,6 +88,8 @@
             })
         })
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 
